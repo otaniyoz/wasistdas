@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Zen Kaku Gothic New";
+  font-kerning: normal;
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+  src: url("fonts/ZenKakuGothicNew-Bold.woff2") format("woff2");
+}
+
+*,
+html {
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-size: clamp(0.95rem, 2vmax + 1rem, 4rem);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+header {
+  display: flex;
+  align-items: baseline;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked+label {
+  transition: 0;
+  color: #005b98;
+}
+.link {
+  color: inherit;
+  transition: 0.5s;
+  padding: 0.5vmin 1vmax;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: inherit;
+  font-size: clamp(0.85rem, 1.75vmax, 2rem);
+}
+.link:hover {
+  transition: 0;
+  color: #005b98;
+  text-decoration-color: #005b98;
+}
+.language-labels {
+  width: 100%;
+  overflow: hidden;
+  padding: 4px 8px 8px;
+  /*  https://bureau.ru/soviet/20180614/*/
+  mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, .25) 9px, #000 18px, #000 calc(100% - 18px), rgba(0, 0, 0, .25) calc(100% - 9px), transparent);
+}
+.language-labels-container {
+  max-width: 100%;
+  overflow-x: scroll;
+  padding-bottom: 25px;
+  margin-bottom: -30px;
+}
+.language-labels-wrapper {
+  display: flex;
+}
+.language-label {
+  font-size: clamp(0.85rem, 1.75vmax, 2rem);
+  padding: 0.5vmin 1vmax;
+  white-space: nowrap;
+  transition: 0.5s;
+  font-weight: 700;
+}
+.language-label:hover {
+  color: #005b98;
+}
+.card {
+  transition: 0.5s;
+  display: inline-block;
+  background-color: #000;
+}
+.card:hover {
+  background-color: #005b98;
+}
+.cards-container {
+  font-size: 0;
+  padding: 0 8px;
+}
+.word,
+.word-language {
+  margin: 0 auto;
+  font-weight: 700;
+  width: fit-content;
+}
+.word {
+  line-height: 0.7em;
+  margin-bottom: 0.25em;
+}
+.word-language {
+  line-height: 1.25em;
+  text-transform: capitalize;
+  font-size: clamp(0.6rem, 1vmin + 0.6rem, 2rem);
+}
+.word-container {
+  width: 100%;
+  height: fit-content;
+  overflow: visible;
+  padding: 16px 8px;
+}
+.shake {
+  animation-name: shake;
+  animation-duration: 0.5s;
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-8px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(8px);
+  }
+}

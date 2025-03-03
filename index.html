@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Wasistdas</title>
+</head>
+
+<body>
+  <header id="header">
+    <a href="https://github.com/otaniyoz/wasistdas" class="link">Wasistdas</a>
+    <div class="language-labels">
+      <div class="language-labels-container">
+        <div class="language-labels-wrapper">
+          <input id="english" name="lang" type="checkbox" value="english" checked />
+          <label class="language-label" for="english">English</label>
+          <input id="russian" name="lang" type="checkbox" value="russian" />
+          <label class="language-label" for="russian">Русский</label>
+          <input id="german" name="lang" type="checkbox" value="german" />
+          <label class="language-label" for="german">Deutsch</label>
+          <input id="japanese" name="lang" type="checkbox" value="japanese" />
+          <label class="language-label" for="japanese">日本語</label>
+          <input id="uzbek" name="lang" type="checkbox" value="uzbek" />
+          <label class="language-label" for="uzbek">Oʻzbekcha</label>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="cards-container" class="cards-container"></section>
+  <section id="word-container" class="word-container">
+    <p id="word" class="word"></p>
+    <p id="word-language" class="word-language"></p>
+  </section>
+</body>
+
+</html>
