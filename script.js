@@ -61,6 +61,7 @@ window.onload = () => {
   
   const cards = [];
   const sounds = [];
+  const audioContext = new AudioContext();
   let cardsNumber = 0;
   let checkedLanguages = ['english'];
 
@@ -167,7 +168,7 @@ window.onload = () => {
       const index = cards.indexOf(card);
       if (index > -1) {
         const soundIndex = Math.random() * sounds.length | 0;
-        sounds[soundIndex].play();
+        playSound(soundIndex);
         cards.splice(index, 1);
         card.style.opacity = 0;
         if (!cards.length) init();          
@@ -273,12 +274,30 @@ window.onload = () => {
     return cells;
   }
 
-  function initSounds() {
-    for (let i = 0; i < 2; i++) {
-      const sound = document.createElement('audio');
-      sound.src = `sounds/${i}.mp3`;
-      sounds.push(sound);
+  function playSound(index) {
+    if (index >= 0 && index < sounds.length) {
+      const source = audioContext.createBufferSource();
+      source.buffer = sounds[index];
+      source.connect(audioContext.destination);
+      source.start();
     }
+    else {
+      console.error('Invalid sound index');
+    }
+  }
+
+
+  async function initSounds() {
+    for (let i = 0; i < 2; i++) {
+      const buffer = await loadSoundBuffer(`sounds/${i}.mp3`);
+      sounds.push(buffer);
+    }
+  }
+
+  async function loadSoundBuffer(url) {
+    const response = await fetch(url);
+    const arrayBuffer = await response.arrayBuffer();
+    return await audioContext.decodeAudioData(arrayBuffer);
   }
   
   function initListeners() {
