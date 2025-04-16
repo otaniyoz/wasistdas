@@ -2,13 +2,13 @@
 window.onload = () => {
   const vocabulary = [
     {english: 'Apple', german: 'Apfel', japanese: 'リンゴ', russian: 'Яблоко', uzbek: 'Olma', turkish: 'Elma'}, 
-    {english: 'Backpack', german: 'Rucksack', japanese: 'バックパック', russian: 'Рюкзак', uzbek: 'Ryukzak', turkish: 'Sırt Çantası'}, 
+    {english: 'Backpack', german: 'Rucksack', japanese: 'バックパック', russian: 'Рюкзак', uzbek: 'Ryukzak', turkish: 'Sırt Chantası'}, 
     {english: 'Bed', german: 'Bett', japanese: 'ベッド', russian: 'Кровать', uzbek: 'Yotoq', turkish: 'Yatak'}, 
-    {english: 'Bird', german: 'Vogel', japanese: '鳥', russian: 'Птица', uzbek: 'Qush',  turkish: 'Kuş'}, 
+    {english: 'Bird', german: 'Vogel', japanese: '鳥', russian: 'Птица', uzbek: 'Qush',  turkish: 'Kush'}, 
     {english: 'Book', german: 'Buch', japanese: '本', russian: 'Книга', uzbek: 'Kitob', turkish: 'Kitap'}, 
     {english: 'Bread', german: 'Brot', japanese: 'パン', russian: 'Хлеб', uzbek: 'Non', turkish: 'Ekmek'}, 
     {english: 'Car', german: 'Auto', japanese: '車', russian: 'Машина', uzbek: 'Mashina', turkish: 'Araba'}, 
-    {english: 'Carrot', german: 'Karotte', japanese: 'ニンジン', russian: 'Морковь', uzbek: 'Sabzi', turkish: 'Havuç'},
+    {english: 'Carrot', german: 'Karotte', japanese: 'ニンジン', russian: 'Морковь', uzbek: 'Sabzi', turkish: 'Havuch'},
     {english: 'Cat', german: 'Katze', japanese: '猫', russian: 'Кошка', uzbek: 'Mushuk', turkish: 'Kedi'}, 
     {english: 'Chair', german: 'Stuhl', japanese: '椅子', russian: 'Стул', uzbek: 'Stul', turkish: 'Sandalye'}, 
     {english: 'Cheese', german: 'Käse', japanese: 'チーズ', russian: 'Сыр', uzbek: 'Pishloq', turkish: 'Peynir'},
@@ -21,13 +21,13 @@ window.onload = () => {
     {english: 'Earth', german: 'Erde', japanese: '地球', russian: 'Земля', uzbek: 'Yer', turkish: 'Dünya'}, 
     {english: 'Egg', german: 'Ei', japanese: '卵', russian: 'Яйцо', uzbek: 'Tuxum', turkish: 'Yumurta'},
     {english: 'Envelope', german: 'Umschlag', japanese: '封筒', russian: 'Конверт', uzbek: 'Konvert', turkish: 'Zarf'},
-    {english: 'Fire', german: 'Feuer', japanese: '火', russian: 'Огонь', uzbek: 'Olov', turkish: 'Ateş'}, 
+    {english: 'Fire', german: 'Feuer', japanese: '火', russian: 'Огонь', uzbek: 'Olov', turkish: 'Atesh'}, 
     {english: 'Fish', german: 'Fisch', japanese: '魚', russian: 'Рыба', uzbek: 'Baliq', turkish: 'Balık'},
-    {english: 'Flower', german: 'Blume', japanese: '花', russian: 'Цветок', uzbek: 'Gul', turkish: 'Çiçek'}, 
+    {english: 'Flower', german: 'Blume', japanese: '花', russian: 'Цветок', uzbek: 'Gul', turkish: 'Chichek'}, 
     {english: 'Forest', german: 'Wald', japanese: '森', russian: 'Лес', uzbek: 'Oʻrmon', turkish: 'Orman'}, 
     {english: 'Glass', german: 'Glas', japanese: 'コップ', russian: 'Стакан', uzbek: 'Stakan', turkish: 'Bardak'}, 
-    {english: 'Hammer', german: 'Hammer', japanese: 'ハンマー', russian: 'Молоток', uzbek: 'Bolgʻa', turkish: 'Çekiç'},
-    {english: 'Hat', german: 'Hut', japanese: '帽子', russian: 'Шляпа', uzbek: 'Shlyapa', turkish: 'Şapka'}, 
+    {english: 'Hammer', german: 'Hammer', japanese: 'ハンマー', russian: 'Молоток', uzbek: 'Bolgʻa', turkish: 'Chekich'},
+    {english: 'Hat', german: 'Hut', japanese: '帽子', russian: 'Шляпа', uzbek: 'Shlyapa', turkish: 'Shapka'}, 
     {english: 'House', german: 'Haus', japanese: '家', russian: 'Дом', uzbek: 'Uy', turkish: 'Ev'}, 
     {english: 'Key', german: 'Schlüssel', japanese: '鍵', russian: 'Ключ', uzbek: 'Kalit', turkish: 'Anahtar'}, 
     {english: 'Meat', german: 'Fleisch', japanese: '肉', russian: 'Мясо', uzbek: 'Goʻsht', turkish: 'Et'},
@@ -35,25 +35,25 @@ window.onload = () => {
     {english: 'Milk', german: 'Milch', japanese: '牛乳', russian: 'Молоко', uzbek: 'Sut', turkish: 'Süt'},
     {english: 'Mirror', german: 'Spiegel', japanese: '鏡', russian: 'Зеркало', uzbek: 'Koʻzgu', turkish: 'Ayna'},
     {english: 'Moon', german: 'Mond', japanese: '月', russian: 'Луна', uzbek: 'Oy', turkish: 'Ay'}, 
-    {english: 'Mountains', german: 'Gebirge', japanese: '山', russian: 'Горы', uzbek: 'Togʻlar', turkish: 'Dağlar'}, 
+    {english: 'Mountains', german: 'Gebirge', japanese: '山', russian: 'Горы', uzbek: 'Togʻlar', turkish: 'Daghlar'}, 
     {english: 'Mushrooms', german: 'Pilze', japanese: 'キノコ', russian: 'Грибы', uzbek: 'Qoʻziqorinlar', turkish: 'Mantarlar'},
-    {english: 'Onion', german: 'Zwiebel', japanese: '玉ねぎ', russian: 'Лук', uzbek: 'Piyoz', turkish: 'Soğan'},
+    {english: 'Onion', german: 'Zwiebel', japanese: '玉ねぎ', russian: 'Лук', uzbek: 'Piyoz', turkish: 'Soghan'},
     {english: 'Pen', german: 'Stift', japanese: 'ペン', russian: 'Ручка', uzbek: 'Ruchka', turkish: 'Kalem'}, 
-    {english: 'Pencil', german: 'Bleistift', japanese: '鉛筆', russian: 'Карандаш', uzbek: 'Qalam', turkish: 'Kurşun Kalem'},
+    {english: 'Pencil', german: 'Bleistift', japanese: '鉛筆', russian: 'Карандаш', uzbek: 'Qalam', turkish: 'Kurshun Kalem'},
     {english: 'Phone', german: 'Telefon', japanese: '電話', russian: 'Телефон', uzbek: 'Telefon', turkish: 'Telefon'}, 
     {english: 'Pineapple', german: 'Ananas', japanese: 'パイナップル', russian: 'Ананас', uzbek: 'Ananas', turkish: 'Ananas'},
-    {english: 'Rain', german: 'Regen', japanese: '雨', russian: 'Дождь', uzbek: 'Yomgʻir', turkish: 'Yağmur'}, 
-    {english: 'Rice', german: 'Reis', japanese: '米', russian: 'Рис', uzbek: 'Guruch', turkish: 'Pirinç'},
+    {english: 'Rain', german: 'Regen', japanese: '雨', russian: 'Дождь', uzbek: 'Yomgʻir', turkish: 'Yaghmur'}, 
+    {english: 'Rice', german: 'Reis', japanese: '米', russian: 'Рис', uzbek: 'Guruch', turkish: 'Pirinch'},
     {english: 'Salt', german: 'Salz', japanese: '塩', russian: 'Соль', uzbek: 'Tuz', turkish: 'Tuz'},
     {english: 'Scissors', german: 'Schere', japanese: 'はさみ', russian: 'Ножницы', uzbek: 'Qaychilar', turkish: 'Makas'},
     {english: 'Screwdriver', german: 'Schraubendreher', japanese: 'ドライバー', russian: 'Отвёртка', uzbek: 'Otvertka', turkish: 'Tornavida'},
     {english: 'Snow', german: 'Schnee', japanese: '雪', russian: 'Снег', uzbek: 'Qor', turkish: 'Kar'}, 
     {english: 'Stamp', german: 'Briefmarke', japanese: '切手', russian: 'Марка', uzbek: 'Marka', turkish: 'Pul'},
     {english: 'Suitcase', german: 'Koffer', japanese: 'スーツケース', russian: 'Чемодан', uzbek: 'Chamadon', turkish: 'Bavul'}, 
-    {english: 'Sun', german: 'Sonne', japanese: '太陽', russian: 'Солнце', uzbek: 'Quyosh', turkish: 'Güneş'}, 
+    {english: 'Sun', german: 'Sonne', japanese: '太陽', russian: 'Солнце', uzbek: 'Quyosh', turkish: 'Günesh'}, 
     {english: 'Tomato', german: 'Tomate', japanese: 'トマト', russian: 'Помидор', uzbek: 'Pomidor', turkish: 'Domates'},
-    {english: 'Tree', german: 'Baum', japanese: '木', russian: 'Дерево', uzbek: 'Daraxt', turkish: 'Ağaç'}, 
-    {english: 'Umbrella', german: 'Regenschirm', japanese: '傘', russian: 'Зонт', uzbek: 'Soyabon', turkish: 'Şemsiye'},
+    {english: 'Tree', german: 'Baum', japanese: '木', russian: 'Дерево', uzbek: 'Daraxt', turkish: 'Aghach'}, 
+    {english: 'Umbrella', german: 'Regenschirm', japanese: '傘', russian: 'Зонт', uzbek: 'Soyabon', turkish: 'Shemsiye'},
     {english: 'Water', german: 'Wasser', japanese: '水', russian: 'Вода', uzbek: 'Suv', turkish: 'Su'},
     {english: 'Wind', german: 'Wind', japanese: '風', russian: 'Ветер', uzbek: 'Shamol', turkish: 'Rüzgar'}, 
     {english: 'Wrench', german: 'Schraubenschlüssel', japanese: 'レンチ', russian: 'Гаечный ключ', uzbek: 'Gayka kaliti', turkish: 'Anahtar'},
@@ -286,7 +286,6 @@ window.onload = () => {
     }
   }
 
-
   async function initSounds() {
     for (let i = 0; i < 2; i++) {
       const buffer = await loadSoundBuffer(`sounds/${i}.mp3`);
@@ -305,7 +304,7 @@ window.onload = () => {
     for (const check of checkboxes) {
       check.addEventListener('change', init);
     }
-    window.addEventListener('resize', setCardsDimensions)
+    window.addEventListener('resize', setCardsDimensions);
   }
 
   init();

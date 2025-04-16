@@ -51,7 +51,7 @@ input[type="checkbox"]:checked+label {
   width: 100%;
   overflow: hidden;
   padding: 4px 8px 8px;
-  /*  https://bureau.ru/soviet/20180614/*/
+  /*  https://bureau.ru/soviet/20180614/ */
   mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, .25) 9px, #000 18px, #000 calc(100% - 18px), rgba(0, 0, 0, .25) calc(100% - 9px), transparent);
 }
 .language-labels-container {
@@ -119,5 +119,10 @@ input[type="checkbox"]:checked+label {
   }
   20%, 40%, 60%, 80% {
     transform: translateX(8px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .language-label:hover {
+    color: #000000;
   }
 }
