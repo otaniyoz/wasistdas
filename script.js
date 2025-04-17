@@ -107,9 +107,8 @@ window.onload = () => {
   function initCards() {
     const words = shuffleArray(vocabulary);
     const cardsContainer = document.getElementById('cards-container');
-
-    const w = document.body.offsetWidth;
     const breakPoints = [[0,319], [320,767], [768,1023], [1024,10000]];
+    const w = document.body.offsetWidth;
     breakPoints.forEach((bp, i) => {
       if (w >= bp[0] && w <= bp[1]) {
         cardsNumber = (i + 1) * 9;
@@ -117,7 +116,13 @@ window.onload = () => {
     });
 
     cards.length = 0;
-    const cardsContainerChildren = cardsContainer.children;      
+    const cardsContainerChildren = cardsContainer.children;
+    if (cardsContainerChildren.length && cardsContainerChildren.length !== cardsNumber) {
+      while(cardsContainer.firstChild) {
+        cardsContainer.removeChild(cardsContainer.lastChild);
+      }
+    }
+
     for (let i = 0; i < cardsNumber; i++) {
       const card = (cardsContainerChildren.length === cardsNumber) ? cardsContainerChildren[i] : document.createElement('article');
       if (cardsContainerChildren.length !== cardsNumber) {
@@ -138,8 +143,8 @@ window.onload = () => {
       card.setAttribute('data-language', language);
       cards.push(card);
     }
-  
-    if (cardsContainerChildren.length !== cardsNumber) cardsContainer.append(...cards);  
+    
+    cardsContainer.append(...cards);
   }
 
   function shuffleArray(array) {
@@ -208,8 +213,9 @@ window.onload = () => {
   }
 
   function getElementDimensions(element, subtractPadding=true) {
-    const widthWithPaddings = element.clientWidth;
-    const heightWithPaddings = element.clientHeight;
+    const rect = element.getBoundingClientRect();
+    const widthWithPaddings = rect.width | 0;
+    const heightWithPaddings = rect.height | 0;
     const elementComputedStyle = window.getComputedStyle(element, null);
     const paddingLeftRight = parseFloat(elementComputedStyle.paddingLeft) + parseFloat(elementComputedStyle.paddingRight);
     const paddingTopBottom = parseFloat(elementComputedStyle.paddingTop) + parseFloat(elementComputedStyle.paddingBottom);
