@@ -14,7 +14,7 @@ window.onload = () => {
     {english: 'Cheese', german: 'Käse', japanese: 'チーズ', russian: 'Сыр', uzbek: 'Pishloq', turkish: 'Peynir'},
     {english: 'Clock', german: 'Uhr', japanese: 'クロック', russian: 'Часы', uzbek: 'Soat', turkish: 'Saat'}, 
     {english: 'Cloud', german: 'Wolke', japanese: '雲', russian: 'Облако', uzbek: 'Bulut', turkish: 'Bulut'}, 
-    {english: 'Compass', german: 'Zirkel', japanese: 'コンパス', russian: 'Циркуль', uzbek: 'Kompaslar', turkish: 'Pergel'},
+    {english: 'Compass', german: 'Zirkel', japanese: 'コンパス', russian: 'Циркуль', uzbek: 'Sirkul', turkish: 'Pergel'},
     {english: 'Cucumber', german: 'Gurke', japanese: 'キュウリ', russian: 'Огурец', uzbek: 'Bodring', turkish: 'Salatalık'},
     {english: 'Dog', german: 'Hund', japanese: '犬', russian: 'Собака', uzbek: 'It', turkish: 'Köpek'}, 
     {english: 'Door', german: 'Tür', japanese: 'ドア', russian: 'Дверь', uzbek: 'Eshik', turkish: 'Kapı'}, 
