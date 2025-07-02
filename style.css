@@ -31,7 +31,7 @@ input[type="checkbox"] {
   display: none;
 }
 input[type="checkbox"]:checked+label {
-  transition: 0;
+  transition: 0s;
   color: #005b98;
 }
 .link {
@@ -44,7 +44,7 @@ input[type="checkbox"]:checked+label {
   font-size: clamp(0.85rem, 1.75vmax, 2rem);
 }
 .link:hover {
-  transition: 0;
+  transition: 0s;
   color: #005b98;
   text-decoration-color: #005b98;
 }
